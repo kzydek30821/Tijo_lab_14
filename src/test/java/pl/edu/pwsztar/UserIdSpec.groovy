@@ -22,6 +22,7 @@ class UserIdSpec extends Specification {
         "85071756522"   | true
         "5245552555"    | false
         "97073002976"   | true
+        "9707300"       | true
     }
     @Unroll
     def "should get right sex"(){
@@ -36,7 +37,7 @@ class UserIdSpec extends Specification {
         pesel           | sex
         "97011035233"   | MAN
         "85071756522"   | WOMAN
-        "97073002976"   | MAN
+        "97073002976"   | WOMAN
     }
 
     @Unroll
@@ -51,7 +52,7 @@ class UserIdSpec extends Specification {
         where:
         pesel           | status
         "97011035233"   | true
-        "85071756522"   | true
+        "85071756523"   | false
         "97073002976"   | true
     }
 
